@@ -3,13 +3,13 @@
     <collectionReader>
         <collectionIterator>
             <descriptor>
-                <import location="../../../../../../../Documents/apache-uima/examples/descriptors/collection_reader/FileSystemCollectionReader.xml"/>
+                <import location="FileSystemCollectionReader.xml"/>
             </descriptor>
             <configurationParameterSettings>
                 <nameValuePair>
                     <name>InputDirectory</name>
                     <value>
-                        <string>/home/jerry/git/hw3-chens1/hw3-chens1/src/main/resources/inputData</string>
+                        <string>/inputData</string>
                     </value>
                 </nameValuePair>
             </configurationParameterSettings>

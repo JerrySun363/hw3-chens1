@@ -12,7 +12,7 @@
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
-        <import name="descriptors.deiis_types"/>
+        <import name="deiis_types"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

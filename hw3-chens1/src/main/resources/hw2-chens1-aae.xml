@@ -5,16 +5,16 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="hw2-chens1-text">
-      <import name="descriptors.hw2-chens1-text"/>
+      <import name="hw2-chens1-text"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="hw2-chens1-token">
-      <import name="descriptors.hw2-chens1-token"/>
+      <import name="hw2-chens1-token"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="hw2-chens1-ngram-aae">
-      <import name="descriptors.hw2-chens1-ngram-aae"/>
+      <import name="hw2-chens1-ngram-aae"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="hw2-chens1-scorePrinter">
-      <import name="descriptors.hw2-chens1-scorePrinter"/>
+      <import name="hw2-chens1-scorePrinter"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>

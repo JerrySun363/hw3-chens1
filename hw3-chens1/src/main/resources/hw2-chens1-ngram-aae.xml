@@ -5,10 +5,10 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="hw2-chens1-ngram">
-      <import name="descriptors.hw2-chens1-ngram"/>
+      <import name="hw2-chens1-ngram"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="hw2-chens1-ngramScoring">
-      <import name="descriptors.hw2-chens1-ngramScoring"/>
+      <import name="hw2-chens1-ngramScoring"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
