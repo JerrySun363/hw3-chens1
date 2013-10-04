@@ -5,20 +5,30 @@ import java.util.LinkedList;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CAS;
+import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.FSIndex;
+import org.apache.uima.collection.CasConsumer_ImplBase;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceProcessException;
 
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Question;
 
-public class ScorePrintAnnotator extends JCasAnnotator_ImplBase {
+public class ScorePrinter extends CasConsumer_ImplBase {
 
   public static double averagePrecision = 0.0;
 
   public static int totalDocument = 0;
 
-  @Override
-  public void process(JCas aJCas) throws AnalysisEngineProcessException {
+  public void processCas(CAS aCAS) throws ResourceProcessException {
+    JCas aJCas=null; 
+    try{
+      aJCas= aCAS.getJCas();
+     } catch (CASException e){
+       throw new ResourceProcessException(e); 
+     }
+    
     FSIndex answers = aJCas.getAnnotationIndex(AnswerScore.type);
     FSIndex question = aJCas.getAnnotationIndex(Question.type);
     Question q = (Question) question.iterator().next();
@@ -62,13 +72,12 @@ public class ScorePrintAnnotator extends JCasAnnotator_ImplBase {
             / (totalDocument + 1);
     totalDocument++;
 
-    // TODO Auto-generated method stub
-
   }
 
-  public void destroy() {
+  public void collectionProcessComplete() {
     System.out.printf("Average Precision: %2f\n\n", averagePrecision);
     super.destroy();
   }
+
 
 }

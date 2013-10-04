@@ -13,9 +13,7 @@
   <delegateAnalysisEngine key="hw2-chens1-ngram-aae">
       <import name="hw2-chens1-ngram-aae"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="hw2-chens1-scorePrinter">
-      <import name="hw2-chens1-scorePrinter"/>
-    </delegateAnalysisEngine>
+    
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>hw2-chens1-aae</name>
