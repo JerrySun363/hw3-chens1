@@ -27,5 +27,13 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.caseditor.ide_2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.caseditor_2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.debug_2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.desceditor_2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.jcas.jcasgenp_2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.launcher_2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.pear_2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima/eclipsePlugins/org.apache.uima.runtime_2.4.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
