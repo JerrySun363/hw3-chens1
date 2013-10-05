@@ -27,8 +27,7 @@
         <node>hw2-chens1-text</node>
         <node>hw2-chens1-token</node>
         <node>hw2-chens1-ngram-aae</node>
-        <node>hw2-chens1-scorePrinter</node>
-      </fixedFlow>
+        </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>
     <capabilities>
