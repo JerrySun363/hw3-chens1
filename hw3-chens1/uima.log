@@ -1,13 +1,14 @@
-10/4/13 9:20:12 PM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.<init>(128): INFO: UIMA Version 2.4.0 UIMA-AS Version 2.4.0
-10/4/13 9:21:23 PM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.notifyOnInitializationFailure: WARNING: Top Level Controller Initialization Exception.
-javax.jms.JMSException: Channel was inactive for too (>30000) long: mu.lti.cs.cmu.edu/128.2.207.11:61616
-	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
-	at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1287)
-	at org.apache.activemq.ActiveMQConnection.ensureConnectionInfoSent(ActiveMQConnection.java:1382)
-	at org.apache.activemq.ActiveMQConnection.start(ActiveMQConnection.java:504)
-	at org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngineCommon_impl$SharedConnection.start(BaseUIMAAsynchronousEngineCommon_impl.java:2953)
-	at org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.createSharedConnection(BaseUIMAAsynchronousEngine_impl.java:400)
-	at org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initialize(BaseUIMAAsynchronousEngine_impl.java:720)
+10/5/13 2:20:06 AM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.<init>(128): INFO: UIMA Version 2.4.0 UIMA-AS Version 2.4.0
+10/5/13 2:20:06 AM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.setupConnection: INFO: UIMA AS Client Created Shared Connection To Broker: tcp://localhost:61616
+10/5/13 2:20:06 AM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initializeProducer: INFO: Initializing JMS Message Producer. Broker: tcp://localhost:61616 Queue Name: Score
+10/5/13 2:20:06 AM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initializeConsumer: INFO: Initializing JMS Message Consumer. Broker: tcp://localhost:61616 Queue Name: ID:Tommy-52311-1380954006605-0:0:1
+10/5/13 2:20:36 AM - 11: org.apache.uima.aae.delegate.Delegate$2.Delegate.TimerTask.run: WARNING: Timeout While Waiting For Reply From Delegate:Score GetMeta Request Timed Out. Configured Reply Window Of 30,000.
+10/5/13 2:20:36 AM - 11: org.apache.uima.adapter.jms.client.ClientServiceDelegate.handleError: WARNING: Request For Metadata Has Timed-out. Service Queue:Score
+10/5/13 2:20:36 AM - 11: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngineCommon_impl.notifyOnTimout: WARNING: Request For Metadata Has Timed-out. Service Queue:Score
+10/5/13 2:20:36 AM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initialize: WARNING: Aborting Asynchronous Client Due to: Metadata Timeout
+10/5/13 2:20:36 AM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.notifyOnInitializationFailure: WARNING: Top Level Controller Initialization Exception.
+org.apache.uima.resource.ResourceInitializationException
+	at org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initialize(BaseUIMAAsynchronousEngine_impl.java:759)
 	at org.apache.uima.aae.jms_adapter.JmsAnalysisEngineServiceStub.<init>(JmsAnalysisEngineServiceStub.java:145)
 	at org.apache.uima.aae.jms_adapter.JmsAnalysisEngineServiceAdapter.initialize(JmsAnalysisEngineServiceAdapter.java:47)
 	at org.apache.uima.impl.CustomResourceFactory_impl.produceResource(CustomResourceFactory_impl.java:92)
@@ -25,10 +26,6 @@ javax.jms.JMSException: Channel was inactive for too (>30000) long: mu.lti.cs.cm
 	at org.apache.uima.tools.cpm.CpmPanel.startProcessing(CpmPanel.java:573)
 	at org.apache.uima.tools.cpm.CpmPanel.access$000(CpmPanel.java:105)
 	at org.apache.uima.tools.cpm.CpmPanel$1.run(CpmPanel.java:713)
-Caused by: org.apache.activemq.transport.InactivityIOException: Channel was inactive for too (>30000) long: mu.lti.cs.cmu.edu/128.2.207.11:61616
-	at org.apache.activemq.transport.InactivityMonitor$4.run(InactivityMonitor.java:186)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:679)
+Caused by: org.apache.uima.aae.error.UimaASMetaRequestTimeout
+	... 18 more
 
-10/4/13 9:25:11 PM - 11: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngineCommon_impl.stop: INFO: Stopping Asynchronous Client.

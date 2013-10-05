@@ -73,6 +73,12 @@
         </configurationParameters>
 		<configurationParameterSettings>
 		    <nameValuePair>
+		        <name>InputDirectory</name>
+		        <value>
+		            <string>/home/jerry/Documents/apache-uima-as-2.4.0/examples/data</string>
+		        </value>
+		    </nameValuePair>
+            <nameValuePair>
                 <name>BrowseSubdirectories</name>
                 <value>
                     <boolean>false</boolean>
