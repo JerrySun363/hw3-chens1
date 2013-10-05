@@ -35,5 +35,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima-as-2.4.0/apache-activemq-5.4.1/activemq-all-5.4.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

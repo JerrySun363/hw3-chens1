@@ -28,6 +28,18 @@
             </errorHandling>
             <checkpoint batch="10000" time="1000ms"/>
         </casProcessor>
+        <casProcessor deployment="integrated" name="scnlp-chens1-client.xml">
+            <descriptor>
+                <import location="scnlp-chens1-client.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+        </casProcessor>
         <casProcessor deployment="integrated" name="hw3-chens1-casconsumer">
             <descriptor>
                 <import location="hw3-chens1-casconsumer.xml"/>
