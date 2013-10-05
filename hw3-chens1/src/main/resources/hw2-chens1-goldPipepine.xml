@@ -10,9 +10,9 @@
     <vendor/>
     <configurationParameters/>
     <configurationParameterSettings/>
-    <typeSystemDescription>
+     <typeSystemDescription>
       <imports>
-        <import name="deiis_types"/>
+        <import location="/home/jerry/git/hw3-chens1/hw3-chens1/src/main/resources/deiis_types.xml"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

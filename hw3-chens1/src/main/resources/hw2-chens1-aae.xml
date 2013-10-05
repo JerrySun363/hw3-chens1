@@ -5,13 +5,13 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="hw2-chens1-text">
-      <import name="hw2-chens1-text"/>
+      <import location="./hw2-chens1-text.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="hw2-chens1-token">
-      <import name="hw2-chens1-token"/>
+      <import location="./hw2-chens1-token.xml"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="hw2-chens1-ngram-aae">
-      <import name="hw2-chens1-ngram-aae"/>
+      <import location="./hw2-chens1-ngram-aae.xml"/>
     </delegateAnalysisEngine>
     
   </delegateAnalysisEngineSpecifiers>
@@ -29,6 +29,7 @@
         <node>hw2-chens1-ngram-aae</node>
         </fixedFlow>
     </flowConstraints>
+    <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>

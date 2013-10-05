@@ -41,7 +41,7 @@
 							<goal>perform</goal>
 						</goals>
 						<configuration>
-							<pomFileName>hw2-chens1/pom.xml</pomFileName>
+							<pomFileName>hw3-chens1/pom.xml</pomFileName>
 						</configuration>
 					</execution>
 				</executions>
@@ -92,7 +92,7 @@
 		</dependency>
 	</dependencies>
 	<scm>
-		<connection>scm:git:git@github.com:JerrySun363/hw2-chens1.git</connection>
-		<developerConnection>scm:git:git@github.com:JerrySun363/hw1-chens1.git</developerConnection>
+		<connection>scm:git:git@github.com:JerrySun363/hw3-chens1.git</connection>
+		<developerConnection>scm:git:git@github.com:JerrySun363/hw3-chens1.git</developerConnection>
 	</scm>
 </project>

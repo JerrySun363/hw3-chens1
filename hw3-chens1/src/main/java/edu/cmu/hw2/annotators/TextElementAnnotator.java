@@ -22,6 +22,7 @@ public class TextElementAnnotator extends  JCasAnnotator_ImplBase
     
     String[] lines=text.split("\n");
     for(int i=0; i <lines.length;i++){
+      //System.out.println(lines[i]);
      if(lines[i].startsWith("Q"))
         parseQuestion(aJCas, lines[i]);
      else
@@ -51,7 +52,6 @@ public class TextElementAnnotator extends  JCasAnnotator_ImplBase
     answer.setConfidence(1.0);
     answer.setCasProcessorId(this.getClass().getName());
     answer.addToIndexes(aJCas);
-    
   }
 
     

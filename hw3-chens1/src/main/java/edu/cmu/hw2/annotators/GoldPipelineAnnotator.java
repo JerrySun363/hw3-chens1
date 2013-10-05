@@ -9,7 +9,6 @@ import org.apache.uima.jcas.JCas;
 
 import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.AnswerScore;
-import edu.cmu.deiis.types.Question;
 
 public class GoldPipelineAnnotator extends JCasAnnotator_ImplBase {
   /**

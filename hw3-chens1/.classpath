@@ -31,7 +31,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/jerry/Documents/apache-uima-as-2.4.0/apache-activemq-5.4.1/activemq-all-5.4.1.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>

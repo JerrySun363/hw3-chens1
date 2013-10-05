@@ -10,9 +10,9 @@
     <vendor/>
     <configurationParameters/>
     <configurationParameterSettings/>
-    <typeSystemDescription>
+      <typeSystemDescription>
       <imports>
-        <import name="deiis_types"/>
+        <import location="deiis_types.xml"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

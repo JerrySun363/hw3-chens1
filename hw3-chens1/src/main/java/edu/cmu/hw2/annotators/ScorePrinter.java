@@ -1,16 +1,16 @@
 package edu.cmu.hw2.annotators;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.collection.CasConsumer_ImplBase;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceProcessException;
+import org.apache.uima.util.ProcessTrace;
 
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Question;
@@ -74,10 +74,12 @@ public class ScorePrinter extends CasConsumer_ImplBase {
 
   }
 
-  public void collectionProcessComplete() {
+  public void collectionProcessComplete(ProcessTrace arg0)throws ResourceProcessException, IOException {
     System.out.printf("Average Precision: %2f\n\n", averagePrecision);
-    super.destroy();
   }
-
-
+  
+  public void batchProcessComplete(ProcessTrace arg0) throws ResourceProcessException, IOException{
+    System.out.printf("Average Precision: %2f\n\n", averagePrecision);
+  }
+  
 }

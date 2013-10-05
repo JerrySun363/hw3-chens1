@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Maintain a AnswerTokens for each question. In this way, it can limit the range of tokens so that there is no need to analyze the wholr JCas object again.
- * Updated by JCasGen Mon Sep 23 23:23:15 EDT 2013
+ * Updated by JCasGen Sat Oct 05 03:10:44 EDT 2013
  * @generated */
 public class AnswerTokens_Type extends Annotation_Type {
   /** @generated */

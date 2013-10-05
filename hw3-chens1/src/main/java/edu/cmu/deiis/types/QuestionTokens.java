@@ -15,8 +15,8 @@ import org.apache.uima.jcas.cas.FSList;
 
 
 /** Used for storing tokens from a single question. When using tokens overlap method, there is no need to analyze the question again to identify the tokens.
- * Updated by JCasGen Mon Sep 23 23:23:15 EDT 2013
- * XML source: /home/jerry/git/hw2-chens1/hw2-chens1/src/main/resources/descriptors/hw2-chens1-aae.xml
+ * Updated by JCasGen Sat Oct 05 03:10:44 EDT 2013
+ * XML source: /home/jerry/git/hw3-chens1/hw3-chens1/src/main/resources/hw2-chens1-ngram.xml
  * @generated */
 public class QuestionTokens extends Annotation {
   /** @generated
