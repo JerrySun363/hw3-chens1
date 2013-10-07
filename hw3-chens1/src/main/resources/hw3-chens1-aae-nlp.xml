@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="hw2-chens1-text">
+      <import location="hw2-chens1-text.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="hw2-chens1-token">
+      <import location="hw2-chens1-token.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="scnlp-chens1-client">
+      <import location="scnlp-chens1-client.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="hw3-chens1-nameEntity">
+      <import location="hw3-chens1-nameEntity.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>hw3-chens1-aae-nlp</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>hw2-chens1-text</node>
+        <node>hw2-chens1-token</node>
+        <node>scnlp-chens1-client</node>
+        <node>hw3-chens1-nameEntity</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>
