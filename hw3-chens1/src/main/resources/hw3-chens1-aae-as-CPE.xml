@@ -16,9 +16,9 @@
         </collectionIterator>
     </collectionReader>
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
-        <casProcessor deployment="integrated" name="hw2-chens1-aae">
+        <casProcessor deployment="integrated" name="hw2-chens1-aae-client">
             <descriptor>
-                <import location="hw2-chens1-aae.xml"/>
+                <import location="hw2-chens1-aae-client.xml"/>
             </descriptor>
             <deploymentParameters/>
             <errorHandling>
