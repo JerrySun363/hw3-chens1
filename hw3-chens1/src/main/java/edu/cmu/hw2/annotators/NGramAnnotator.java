@@ -25,7 +25,9 @@ import edu.cmu.deiis.types.Token;
  */
 
 public class NGramAnnotator extends JCasAnnotator_ImplBase {
-
+   /**
+    * The method processes the JCas types.
+    */
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub

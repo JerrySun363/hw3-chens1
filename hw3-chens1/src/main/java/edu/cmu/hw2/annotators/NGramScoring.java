@@ -13,10 +13,18 @@ import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.NGram;
 import edu.cmu.deiis.types.Question;
 import edu.cmu.deiis.types.QuestionTokens;
-
+/**
+ * This class generally does the NGram scoring based on the NGrams the docs generate.
+ *
+ * @author Jerry
+ *
+ */
 public class NGramScoring extends JCasAnnotator_ImplBase {
   private HashSet<String> texts = new HashSet<String>();
-
+  /**
+   * Read the JCas document, and get he NGram, Question and Answers.
+   * Together with the three to generate the scores.
+   */
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     FSIndex ngramIndex = aJCas.getAnnotationIndex(NGram.type);

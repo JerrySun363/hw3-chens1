@@ -16,6 +16,12 @@ import edu.cmu.deiis.types.AnswerTokens;
 import edu.cmu.deiis.types.Question;
 import edu.cmu.deiis.types.QuestionTokens;
 import edu.cmu.deiis.types.Token;
+/**
+ * This step is the second step in annotation.
+ * It generates the tokens of the questions and answers for future evaluation step.
+ * 
+ * @author Jerry
+ */
 
 public class TokenAnnotator extends JCasAnnotator_ImplBase {
   private JCas aJCas = null;
@@ -73,6 +79,14 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
     }
   }
 
+  /**
+   * Parse the tokens in a text line.
+   * type indicates whether is an answer or a question.
+   * This distinction would be easy for future evaluation steps.
+   * 
+   * @param text
+   * @param type
+   */
   public void parseTokens(String text, int type) {
     TextTokenizer t = new TextTokenizer(text);
     t.setSeparators(".,!?");

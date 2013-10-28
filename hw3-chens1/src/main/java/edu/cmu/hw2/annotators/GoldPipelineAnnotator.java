@@ -9,13 +9,15 @@ import org.apache.uima.jcas.JCas;
 
 import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.AnswerScore;
+import edu.cmu.deiis.types.Question;
+
+/**
+ * Initialize with the Gold Pipeline method. This method is the ideal situation (in my opinion).
+ * Because we were trying to use the given texts to find whether the answers are right rather than
+ * using the internal isCorrect key to judge.
+ */
 
 public class GoldPipelineAnnotator extends JCasAnnotator_ImplBase {
-  /**
-   * Initialize with the Gold Pipeline method. This method is the ideal situation (in my opinion).
-   * Because we were trying to use the given texts to find whether the answers are right rather than
-   * using the internal isCorrect key to judge.
-   */
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     FSIndex answerIndex = aJCas.getAnnotationIndex(Answer.type);

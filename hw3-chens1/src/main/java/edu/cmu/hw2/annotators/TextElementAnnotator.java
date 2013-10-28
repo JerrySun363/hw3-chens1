@@ -5,6 +5,12 @@ import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.Question;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 
+/**
+ * This class is the initial step to annotate the document with 
+ * Question and Answer type.
+ * @author Jerry
+ *
+ */
 public class TextElementAnnotator extends  JCasAnnotator_ImplBase
  {
    //This integer is used to recorded the global position of the file. 
@@ -22,7 +28,6 @@ public class TextElementAnnotator extends  JCasAnnotator_ImplBase
     
     String[] lines=text.split("\n");
     for(int i=0; i <lines.length;i++){
-      //System.out.println(lines[i]);
      if(lines[i].startsWith("Q"))
         parseQuestion(aJCas, lines[i]);
      else
@@ -31,6 +36,12 @@ public class TextElementAnnotator extends  JCasAnnotator_ImplBase
     
   }
   
+  /**
+   * 
+   * @param aJCas
+   * @param line
+   * Parse a line of Question type.
+   */
   private void parseQuestion(JCas aJCas, String line){
     int start = globalPosition+2;
     int end = globalPosition+line.length();
@@ -41,6 +52,12 @@ public class TextElementAnnotator extends  JCasAnnotator_ImplBase
     question.addToIndexes(aJCas);
   }
   
+  /**
+   * 
+   * @param aJCas
+   * @param line
+   * Parse a line of Answer.
+   */
   private void parseAnswer(JCas aJCas, String line){
     int offset = line.indexOf(" ", 2)+1;
     int start = globalPosition+offset;
@@ -52,6 +69,7 @@ public class TextElementAnnotator extends  JCasAnnotator_ImplBase
     answer.setConfidence(1.0);
     answer.setCasProcessorId(this.getClass().getName());
     answer.addToIndexes(aJCas);
+    
   }
 
     
