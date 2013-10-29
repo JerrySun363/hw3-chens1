@@ -15,6 +15,11 @@ import org.apache.uima.util.ProcessTrace;
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Question;
 
+/**
+ * This class mainly generates the score and prints out the scores. It serves as a CAS consumer.
+ * 
+ * @author Jerry
+ */
 public class ScorePrinter extends CasConsumer_ImplBase {
 
   public static double averagePrecision = 0.0;
